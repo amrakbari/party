@@ -8,6 +8,7 @@ class RoomSerializers(serializers.ModelSerializer):
     guest_can_pause = serializers.BooleanField(required=True)
     votes_to_skip = serializers.IntegerField(required=True)
     code = serializers.CharField(read_only=True)
+    created_at = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = Room
